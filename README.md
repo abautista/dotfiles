@@ -16,6 +16,7 @@ Right now, the only dependencie is [oh-my-zsh](https://github.com/robbyrussell/o
 git clone git://github.com/abautista/dotfiles.git && cd dotfiles && ./sync.sh
 ```
 
+## Thanks to:
 
-
-
+* [Mathias Bynens](http://mathiasbynens.be/) and his [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
+* [Paul Irish](http://paulirish.com/) and his [dotfiles repository](https://github.com/paulirish/dotfiles)
