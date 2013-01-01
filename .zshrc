@@ -29,7 +29,11 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-for file in ~/.{path,aliases,functions,extra}; do
+for file in ~/.{path,aliases,functions,exports,extra}; do
 	[ -r "$file" ] && source "$file"
 done
+
+# virtualenvwrapper
+source /opt/local/bin/virtualenvwrapper.sh-2.7
+
 unset file
