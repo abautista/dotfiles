@@ -1,3 +1,1 @@
 export WORKON_HOME="~/Envs"
-export VIRTUALENVWRAPPER_VIRTUALENV="virtualenv-2.7"
-export VIRTUALENVWRAPPER_VIRTUALENV_CLONE="virtualenv-clone-2.7"

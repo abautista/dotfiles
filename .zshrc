@@ -34,6 +34,6 @@ for file in ~/.{path,aliases,functions,exports,extra}; do
 done
 
 # virtualenvwrapper
-source /opt/local/bin/virtualenvwrapper.sh-2.7
+source /usr/local/share/python/virtualenvwrapper.sh
 
 unset file
