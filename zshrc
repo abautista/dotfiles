@@ -36,4 +36,8 @@ done
 # virtualenvwrapper
 source /usr/local/share/python/virtualenvwrapper.sh
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
 unset file
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
