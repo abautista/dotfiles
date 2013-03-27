@@ -29,7 +29,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-for file in ~/.{path,aliases,functions,exports,extra}; do
+for file in ~/.{exports,path,aliases,functions,extra}; do
 	[ -r "$file" ] && source "$file"
 done
 
