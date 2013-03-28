@@ -1,3 +1,2 @@
-PATH=$PATH:~/bin
-PATH=/usr/local/bin:/usr/local/share/python:$PATH
+PATH=/usr/local/bin:/usr/local/share/python:/usr/local/share/npm/bin:$HOME/bin:$PATH
 export PATH
