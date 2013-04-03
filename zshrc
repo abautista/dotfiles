@@ -40,3 +40,5 @@ source /usr/local/share/python/virtualenvwrapper.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.rvm/bin 
+
+export TERM='xterm-256color'
