@@ -27,7 +27,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-
 set guifont=Monaco:h14
 
 set number
@@ -37,8 +36,8 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-
 execute pathogen#infect()
+execute pathogen#helptags()
 syntax on
 filetype plugin indent on
 highlight ColorColumn ctermbg=235  guibg=#111111
