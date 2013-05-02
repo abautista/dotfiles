@@ -1,3 +1,7 @@
+snippet scriptsrc "javascript" !b
+<script src="${1}" type="text/javascript"></script>
+endsnippet
+
 snippet metaviewport "Viewport" !b
 <meta name="viewport" content="width=device-width, initial-scale=1">
 endsnippet
@@ -44,3 +48,17 @@ snippet jqmpage "jQuery Mobile Basic Page" !b
 </div>   
 endsnippet
 
+snippet jqmnavbar "jQuery Mobile Nav Bar" !b
+<div data-role="navbar">
+   <ul>
+       <li><a href="${1:#}" data-transition="${2:none}" data-icon="${3:home}">${4}</a></li>
+   </ul>
+</div>
+endsnippet
+
+snippet jqmfield "Field in form" !b
+<div data-role="fieldcontain">
+    <label for="${1}">${2}</label>
+    <input type="text" name="${1}" id="${1}">
+</div>
+endsnippet

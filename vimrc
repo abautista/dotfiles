@@ -1,20 +1,28 @@
 set encoding=utf-8
 set nocompatible
-colorscheme mustang
+execute pathogen#infect()
+execute pathogen#helptags()
+filetype plugin indent on
 "let &colorcolumn=join(range(80,999),",")
-set colorcolumn=80
-set textwidth=78
-
+"set textwidth=78
 "set formatoptions+=a set formatoptions+=n 
 
+syntax on
+colorscheme mustang
+highlight ColorColumn ctermbg=235  guibg=#111111
+set guifont=Monaco:h14
 set ruler
+set colorcolumn=80
+set guioptions-=L
+set number
+set cursorline
 
-" Source the vimrc file after saving it
-"if has("autocmd")
-"    autocmd bufwritepost .vimrc source $MYVIMRC
-"endif
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
 
-" Use the same symbols as TextMate for tabstops and EOLs
+"Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
 let mapleader = ","
@@ -27,17 +35,3 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-set guifont=Monaco:h14
-
-set number
-set cursorline
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-
-execute pathogen#infect()
-execute pathogen#helptags()
-syntax on
-filetype plugin indent on
-highlight ColorColumn ctermbg=235  guibg=#111111
