@@ -1,7 +1,5 @@
 set encoding=utf-8
 set nocompatible
-execute pathogen#infect()
-execute pathogen#helptags()
 filetype plugin indent on
 "let &colorcolumn=join(range(80,999),",")
 "set textwidth=78
