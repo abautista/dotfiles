@@ -1,7 +1,53 @@
+#############
+# META TAGS #
+#############
+
+snippet metaviewport "Viewport" !b
+<meta name="viewport" content="width=device-width, initial-scale=1">
+endsnippet
+
+##############
+# HTML5 TAGS #
+##############
+
+snippet html5 "HTML5 Template" !b
+<!DOCTYPE html>
+<html>
+<head>
+    <title>${1}</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    $0
+</body>
+</html>
+endsnippet
+
 snippet scriptsrc "javascript" !b
 <script src="${1}" type="text/javascript"></script>
 endsnippet
 
-snippet metaviewport "Viewport" !b
-<meta name="viewport" content="width=device-width, initial-scale=1">
+snippet article "HTML Article" !b
+<article>
+    $0
+</article>
+endsnippet
+
+snippet header "HTML Article" !b
+<header>
+    $0
+</header>
+endsnippet
+
+snippet footer "HTML Article" !b
+<footer>
+    $0
+</footer>
+endsnippet
+
+snippet h1 "<h1> tag" !b
+<h1>
+    $0
+</h1>
 endsnippet
