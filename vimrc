@@ -1,7 +1,5 @@
 set encoding=utf-8
 set nocompatible
-filetype off
-filetype plugin indent on
 "let &colorcolumn=join(range(80,999),",")
 "set textwidth=78
 "set formatoptions+=a set formatoptions+=n 
@@ -15,6 +13,11 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+noremap <C-n> :NERDTreeToggle<CR> 
+
+" Space to toggle folds
+nnoremap <Space> za
+vnoremap <Space> za
 
 syntax on
 colorscheme mustang
@@ -33,6 +36,8 @@ set expandtab
 
 "Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
+
+autocmd FileType markdown setlocal formatoptions+=na textwidth=78
 
 let iCanHazVundle=1
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
@@ -54,6 +59,13 @@ Bundle 'tpope/vim-surround'
 Bundle 'SirVer/ultisnips'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tomasr/molokai'
+Bundle 'skammer/vim-css-color'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-markdown'
+Bundle 'nelstrom/vim-markdown-folding'
+
+filetype off
+filetype plugin indent on
 
 if iCanHazVundle == 0
     echo "Installing Bundles, please ignore key map error messages"
