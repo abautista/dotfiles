@@ -63,6 +63,8 @@ Bundle 'skammer/vim-css-color'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
 Bundle 'nelstrom/vim-markdown-folding'
+Bundle 'mattn/zencoding-vim'
+Bundle 'tpope/vim-commentary'
 
 filetype off
 filetype plugin indent on
