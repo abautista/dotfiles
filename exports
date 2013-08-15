@@ -1,2 +1,1 @@
 export WORKON_HOME="~/Envs"
-export PHONEGAP_HOME="$HOME/Development/phonegap/phonegap-2.5.0"
