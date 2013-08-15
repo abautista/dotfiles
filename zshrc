@@ -34,7 +34,7 @@ for file in ~/.{exports,path,aliases,functions,extra}; do
 done
 
 # Virtualenvwrapper
-source /usr/local/share/python/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
