@@ -2,7 +2,7 @@
 
 DOTFILESDIR="$(pwd -P)"
 
-for DOTFILE in {aliases,exports,path,zshrc,vim,vimrc,gitconfig,gitignore_global}; do
+for DOTFILE in {gemrc,aliases,exports,path,zshrc,vim,vimrc,gitconfig,gitignore_global}; do
 	HOMEFILE="$HOME/.$DOTFILE"
 	DIRFILE="$DOTFILESDIR/$DOTFILE"
     
