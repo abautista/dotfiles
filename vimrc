@@ -1,8 +1,29 @@
-" Preamble
+" Basic options {{{
 set nocompatible
 set encoding=utf-8
+" }}}
+" UI options {{{ 
+set colorcolumn=80                               " show vertical ruler
+set number                                       " show line numbers
+set cursorline                                   " highlight current line
+set visualbell                                   " no bell please
 
-" Setting up Vundle - the vim plugin bundler
+set guifont=Monaco:h14                           " font macvim
+set guioptions-=L                                " hide left hand scrollbar
+set guioptions-=r                                " hide right hand scrollbar
+
+syntax on                                        " turn on syntax coloring
+colorscheme mustang                              " colorscheme
+highlight ColorColumn ctermbg=235  guibg=#111111 " color of vertical ruler
+" }}}
+" Spaces & Tabs {{{ 
+set tabstop=2     " 2 space tab
+set softtabstop=2 " 2 space tab
+set expandtab     " use spaces for tabs
+set shiftwidth=2
+set modelines=1
+" }}}
+" Vundle and Plugins {{{
 let iCanHazVundle=1
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
 if !filereadable(vundle_readme)
@@ -22,6 +43,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tomasr/molokai'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()
 
@@ -33,28 +55,18 @@ if iCanHazVundle == 0
   echo ""
   :BundleInstall
 endif
-
-" Basic options 
-syntax on
-colorscheme mustang
-highlight ColorColumn ctermbg=235  guibg=#111111
-set guifont=Monaco:h14
-set ruler
-set colorcolumn=80
-set guioptions-=L
-set number
-set cursorline
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-
-" Convenience mappings
+" }}}
+" Mappings {{{
 let mapleader = ","
-nmap <leader>v :tabedit $MYVIMRC<CR>
-nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>v :tabedit $MYVIMRC<CR>
+nnoremap <leader>t <C-w>v<C-w>l
+
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-noremap <C-n> :NERDTreeToggle<CR> 
+
+nnoremap <C-n> :NERDTreeToggle<CR> 
+" }}}
+
+" vim:foldmethod=marker:foldlevel=0
