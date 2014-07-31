@@ -7,7 +7,7 @@ set colorcolumn=80                               " show vertical ruler
 set number                                       " show line numbers
 set cursorline                                   " highlight current line
 set visualbell                                   " no bell please
-
+set laststatus=2                                 " always show line status
 set guifont=Monaco:h14                           " font macvim
 set guioptions-=L                                " hide left hand scrollbar
 set guioptions-=r                                " hide right hand scrollbar
@@ -44,6 +44,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tomasr/molokai'
 Plugin 'godlygeek/tabular'
+Plugin 'bling/vim-airline'
 
 call vundle#end()
 
