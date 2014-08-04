@@ -1,59 +1,195 @@
-#############
-# META TAGS #
-#############
-
+# META TAGS 
 snippet metaviewport "Viewport" !b
 <meta name="viewport" content="width=device-width, initial-scale=1">
 endsnippet
 
-##############
-# HTML5 TAGS #
-##############
-
-snippet html5 "HTML5 Template" !b
-<!DOCTYPE html>
-<html>
-<head>
-    <title>${1}</title>
-    <meta charset="utf-8" />
-</head>
-
-<body>
-    $0
-</body>
-</html>
+# Attributes
+snippet .
+class="${1}"
 endsnippet
 
-snippet scriptsrc "javascript" !b
-<script src="${1}"></script>
+snippet #
+id="${1}"
 endsnippet
 
-snippet section "HTML section tag" !b
-<section>
-    $0
-</section>
+snippet href
+href="${1:#}"
 endsnippet
 
-snippet article "HTML article tag" !b
-<article>
-    $0
-</article>
+snippet data 
+data=${1}="${2:$1}"
 endsnippet
 
-snippet header "HTML header tag" !b
-<header>
-    $0
-</header>
+# Elements 
+snippet a
+<a href="${1:#}">${0:$1}</a>
 endsnippet
 
-snippet footer "HTML footer tag" !b
-<footer>
-    $0
-</footer>
+snippet a.
+<a class="${1}" href="${2:#}">${0:$1}</a>
 endsnippet
 
-snippet h1 "HTML h1 tag" !b
-<h1>
-    $0
-</h1>
+snippet a#
+<a id="${1}" href="${2:#}">${0:$1}</a>
 endsnippet
+
+snippet div
+<div>
+  ${0}
+</div>
+endsnippet
+
+snippet div.
+<div class="${1}">
+  ${0}
+</div>
+endsnippet
+
+snippet div#
+<div id="${1}">
+  ${0}
+</div>
+endsnippet
+
+snippet dt
+<dt>${0}</dt>
+endsnippet
+
+snippet dt.
+<dt class="${1}">${0}</dt>
+endsnippet
+
+snippet dt#
+<dt id="${1}">${0}</dt>
+endsnippet	
+
+snippet dt+
+<dt>${1}</dt>
+<dd>${2}</dd>
+dt+${0}
+endsnippet
+
+snippet h1
+<h1>${0}</h1>
+endsnippet
+
+snippet h1.
+<h1 class="${1}">${0}</h1>
+endsnippet  
+
+snippet h1#
+<h1 id="${1}">${0}</h1>
+endsnippet  
+
+snippet h2
+<h2>${0}</h2>
+endsnippet  
+
+snippet h2.
+<h2 class="${1}">${0}</h2>
+endsnippet
+
+snippet h2#
+<h2 id="${1}">${0}</h2>
+endsnippet  
+
+snippet h3
+<h3>${0}</h3>
+endsnippet
+
+snippet h3.
+<h3 class="${1}">${0}</h3>
+endsnippet
+
+snippet h3#
+<h3 id="${1}">${0}</h3>
+endsnippet
+
+snippet h4
+<h4>${0}</h4>
+endsnippet  
+
+snippet h4.
+<h4 class="${1}">${0}</h4>
+endsnippet  
+
+snippet h4#
+<h4 id="${1}">${0}</h4>
+endsnippet  
+
+snippet h5
+<h5>${0}</h5>
+endsnippet  
+
+snippet h5.
+<h5 class="${1}">${0}</h5>
+endsnippet  
+
+snippet h5#
+<h5 id="${1}">${0}</h5>
+endsnippet  
+
+snippet h6
+<h6>${0}</h6>
+endsnippet  
+
+snippet h6.
+<h6 class="${1}">${0}</h6>
+endsnippet  
+
+snippet h6#
+<h6 id="${1}">${0}</h6>
+endsnippet
+
+snippet li+
+<li>${1}</li>
+endsnippet
+
+snippet p
+<p>${0}</p>
+endsnippet
+
+snippet p.
+<p class="${1}">${0}</p>
+endsnippet
+
+snippet p#
+<p id="${1}">${0}</p>
+endsnippet
+
+snippet span
+<span>${0}</span>
+endsnippet
+
+snippet span.
+<span class="${1}">${0}</span>
+endsnippet
+
+snippet span#
+	<span id="${1}">${0}</span>
+endsnippet	
+
+snippet td
+<td>${0}</td>
+endsnippet
+
+snippet td.
+<td class="${1}">${0}</td>
+endsnippet
+
+snippet td#
+<td id="${1}">${0}</td>
+endsnippet
+
+snippet td+
+<td>${1}</td>
+td+${0}
+endsnippet
+
+snippet ul+
+<ul>
+  <li>${1}</li>
+  li+${0}
+</ul>
+endsnippet
+

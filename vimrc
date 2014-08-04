@@ -39,12 +39,13 @@ call vundle#begin()
 
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tomasr/molokai'
 Plugin 'godlygeek/tabular'
 Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-rails'
 
 call vundle#end()
 
@@ -67,7 +68,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-nnoremap <C-n> :NERDTreeToggle<CR> 
+nnoremap <D-1> :NERDTreeToggle<CR> 
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
