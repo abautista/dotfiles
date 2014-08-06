@@ -46,7 +46,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rails'
-
+Plugin 'Shougo/neocomplete.vim'
 call vundle#end()
 
 filetype off
@@ -58,6 +58,15 @@ if iCanHazVundle == 0
   :BundleInstall
 endif
 " }}}
+" Neocomplete {{{
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#max_list = 30
+
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+
+" }}}
 " Mappings {{{
 let mapleader = ","
 nnoremap <leader>v :tabedit $MYVIMRC<CR>
@@ -67,7 +76,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
 nnoremap <D-1> :NERDTreeToggle<CR> 
 " }}}
 
