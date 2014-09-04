@@ -8,7 +8,7 @@ set number                                       " show line numbers
 set cursorline                                   " highlight current line
 set visualbell                                   " no bell please
 set laststatus=2                                 " always show line status
-set guifont=Monaco:h14                           " font macvim
+set guifont=Monaco:h12                           " font macvim
 set guioptions-=L                                " hide left hand scrollbar
 set guioptions-=r                                " hide right hand scrollbar
 
@@ -47,6 +47,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rails'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'klen/python-mode'
 call vundle#end()
 
 filetype off
@@ -71,7 +72,7 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 let mapleader = ","
 nnoremap <leader>v :tabedit $MYVIMRC<CR>
 nnoremap <leader>t <C-w>v<C-w>l
-
+nnoremap <Space> za
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
