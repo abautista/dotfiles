@@ -47,7 +47,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rails'
 Plugin 'Shougo/neocomplete.vim'
-Plugin 'klen/python-mode'
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()
 
 filetype off
@@ -59,13 +59,28 @@ if iCanHazVundle == 0
   :BundleInstall
 endif
 " }}}
-" Neocomplete {{{
+" Neocomplete {{{ 
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#enable_refresh_always = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 1
 let g:neocomplete#max_list = 30
+
+let g:jedi#completions_enabled = 1 
+let g:jedi#auto_vim_configuration = 1
+let g:jedi#popup_select_first = 0
 
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType python setlocal omnifunc=jedi#completions
+
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
+autocmd FileType python setlocal completeopt-=preview
+let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#popup_on_dot = 0
 
 " }}}
 " Mappings {{{
