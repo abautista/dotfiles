@@ -1,0 +1,9 @@
+(source gnu)
+(source melpa)
+
+(depends-on "cask")
+(depends-on "auto-complete")
+(depends-on "jedi")
+(depends-on "yasnippet")
+(depends-on "projectile")
+(depends-on "helm-projectile")
