@@ -2,6 +2,9 @@
 (cask-initialize)
 
 (require 'helm-config)
+(require 'auto-complete-config)
+
+(projectile-global-mode)
 (ido-mode 1)
 (ido-vertical-mode 1)
 (yas-global-mode t)
@@ -13,23 +16,21 @@
 
 (delete-selection-mode t)
 (show-paren-mode t)
-
-(bind-key "C-+" 'text-scale-increase)
-(bind-key "C--" 'text-scale-decrease)
-
 (setq make-backup-file nil)
 (setq auto-save-default nil)
 (setq inhibit-startup-message t)
+(setq-default indent-tabs-mode nil)
+(setq ring-bell-function 'ignore)
 
-(require 'auto-complete-config)
 (ac-config-default)
 
 (global-set-key (kbd "C-x b") 'helm-mini)
 
-(projectile-global-mode)
-
 (setq venv-location "~/Envs")
 (add-hook 'python-mode-hook 'jedi:setup)
+
+(setq jedi:environment-root "jedi3")
+(setq jedi:environment-virtualenv (list "virtualenv" "-p" "/usr/local/bin/python3"))
 (setq jedi:complete-on-dot t)
 ;;(add-hook 'python-mode-hook (lambda () (setq indent-tabs-mode t)))
 
