@@ -4,6 +4,9 @@
 
 [core]
 	excludesfile = ~/.gitignore_global
+[alias]
+  l = log --oneline --abbrev-commit --abbrev=4 -25
+  s = status -s
 
 # Any GitHub repo with my username should be checked out r/w by default
 # http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
