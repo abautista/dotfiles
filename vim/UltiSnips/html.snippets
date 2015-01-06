@@ -21,45 +21,87 @@ data=${1}="${2:$1}"
 endsnippet
 
 # Elements 
-snippet a
-<a href="${1:#}">${0:$1}</a>
+snippet a "a" w
+<a href="${1:#}">$0</a>
 endsnippet
 
-snippet a.
-<a class="${1}" href="${2:#}">${0:$1}</a>
+snippet a. "a class" w
+<a class="${1}" href="${2:#}">$0</a>
 endsnippet
 
-snippet a#
+snippet a# "a id" w
 <a id="${1}" href="${2:#}">${0:$1}</a>
 endsnippet
 
-snippet div
+snippet div "div" w
 <div>
-  ${0}
+  $0
 </div>
 endsnippet
 
-snippet div.
+snippet div. "div class" w
 <div class="${1}">
-  ${0}
+  $0
 </div>
 endsnippet
 
-snippet div#
+snippet div# "div id" w
 <div id="${1}">
-  ${0}
+  $0
 </div>
 endsnippet
 
-snippet dt
+snippet header "header" w
+<header>
+  $0
+</header>
+endsnippet
+
+snippet header. "header class" w
+<header class="${1}">
+  $0
+</header>
+endsnippet
+
+snippet footer "footer" w
+<footer>
+  $0
+</footer>
+endsnippet
+
+snippet footer. "footer class" w
+<footer class="${1}">
+  $0
+</footer>
+endsnippet
+
+snippet section "section" w
+<section>
+  $0
+</section>
+endsnippet
+
+snippet section. "section class" w
+<section class="${1}">
+  $0
+</section>
+endsnippet
+
+snippet nav "nav" w
+<nav>
+  $0
+</nav>
+endsnippet
+
+snippet dt "dt" w
 <dt>${0}</dt>
 endsnippet
 
-snippet dt.
+snippet dt. "dt class" w
 <dt class="${1}">${0}</dt>
 endsnippet
 
-snippet dt#
+snippet dt# "dt id"
 <dt id="${1}">${0}</dt>
 endsnippet	
 
@@ -69,43 +111,43 @@ snippet dt+
 dt+${0}
 endsnippet
 
-snippet h1
-<h1>${0}</h1>
+snippet h1 "h1" w
+<h1>$0</h1>
 endsnippet
 
-snippet h1.
-<h1 class="${1}">${0}</h1>
+snippet h1. "h1 class" w
+<h1 class="${1}">$0</h1>
 endsnippet  
 
-snippet h1#
-<h1 id="${1}">${0}</h1>
+snippet h1# "h1 id" w
+<h1 id="${1}">$0</h1>
 endsnippet  
 
-snippet h2
-<h2>${0}</h2>
+snippet h2 "h2"
+<h2>$0</h2>
 endsnippet  
 
-snippet h2.
-<h2 class="${1}">${0}</h2>
+snippet h2. "h2 class" w
+<h2 class="${1}">$0</h2>
 endsnippet
 
-snippet h2#
+snippet h2# "h2 id" w
 <h2 id="${1}">${0}</h2>
 endsnippet  
 
-snippet h3
+snippet h3 "h3" w
 <h3>${0}</h3>
 endsnippet
 
-snippet h3.
+snippet h3. "h3 class" w
 <h3 class="${1}">${0}</h3>
 endsnippet
 
-snippet h3#
+snippet h3# "h3 id" w
 <h3 id="${1}">${0}</h3>
 endsnippet
 
-snippet h4
+snippet h4 "h4" w
 <h4>${0}</h4>
 endsnippet  
 
@@ -141,8 +183,8 @@ snippet h6#
 <h6 id="${1}">${0}</h6>
 endsnippet
 
-snippet li+
-<li>${1}</li>
+snippet li "li" w
+<li>$0</li>
 endsnippet
 
 snippet p
@@ -193,7 +235,6 @@ endsnippet
 snippet ul+
 <ul>
   <li>${1}</li>
-  li+${0}
 </ul>
 endsnippet
 

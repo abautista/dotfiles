@@ -1,23 +1,11 @@
 extends html, ruby, rails
 
-snippet rc
-<% ${0} %>
+snippet rc "rc" w
+<% $0 %>
 endsnippet
 
-snippet =
-<%= ${1} %>
-endsnippet
-
-snippet lia
-<%= link_to "${1:link text...}", ${0:action} %>
-endsnippet
-
-snippet it
-<%= image_tag "${1}"${0} %>
-endsnippet
-
-snippet it(
-<%= image_tag(${1}, ${0}) %>
+snippet re "re" w
+<%= $0 %>
 endsnippet
 
 snippet if
@@ -32,4 +20,24 @@ ${2}
 <% else %>
 ${0}
 <% end %>
+endsnippet
+
+snippet lia "link to action" w
+<%= link_to "${1:link text...}", ${0:action} %>
+endsnippet
+
+snippet it
+<%= image_tag "${1}"${0} %>
+endsnippet
+
+snippet it(
+<%= image_tag(${1}, ${0}) %>
+endsnippet
+
+snippet jsit
+<%= javascript_include_tag "${0}" %>
+endsnippet	
+
+snippet sslt
+<%= stylesheet_link_tag "${0}" %>
 endsnippet
