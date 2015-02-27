@@ -9,3 +9,8 @@ alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+alias tmns='tmux new -s'
+alias tmls='tmux list-session'
+alias tmas='tmux attach -t'
+alias tmks='tmux kill-session -t'
