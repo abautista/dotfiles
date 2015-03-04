@@ -1,0 +1,7 @@
+(source melpa)
+
+(depends-on "cask")
+(depends-on "expand-region")
+(depends-on "ace-jump-mode")
+(depends-on "auto-complete")
+(depends-on "flx-ido")
