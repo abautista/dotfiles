@@ -7,4 +7,4 @@ emacs.d/.cask
 emacs.d/projectile-bookmarks.eld
 emacs.d/ac-comphist.dat
 emacs.d/auto-save-list
-
+emacs.d/.python-environments
