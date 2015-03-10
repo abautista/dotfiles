@@ -15,7 +15,11 @@
 (require 'auto-complete-config)
 (ac-config-default)
 (add-hook 'python-mode-hook 'jedi:setup)
+
+;; Jedi
 (setq jedi:complete-on-dot t)
+(setq jedi:environment-root "default3")
+(setq jedi:environment-virtualenv (list "virtualenv" "-p" "/usr/local/bin/python3"))
 
 ;; Keybindings
 (global-set-key (kbd "C-o") 'er/expand-region)
