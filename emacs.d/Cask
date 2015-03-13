@@ -4,7 +4,7 @@
 (depends-on "expand-region")
 (depends-on "ace-jump-mode")
 (depends-on "auto-complete")
-(depends-on "flx-ido")
 (depends-on "projectile")
 (depends-on "helm-projectile")
 (depends-on "jedi")
+(depends-on "yasnippet")
