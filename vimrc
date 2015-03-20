@@ -72,6 +72,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-n> :NERDTreeToggle<CR> 
+nnoremap <Leader>. :exe "vertical resize +5"<CR>
+nnoremap <Leader>- :exe "vertical resize -5"<CR>
 " }}}
 
 "let g:clang_user_options='|| exit 0'
