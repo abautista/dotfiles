@@ -11,3 +11,5 @@
 (depends-on "emmet-mode")
 (depends-on "highlight-indentation")
 (depends-on "web-mode")
+(depends-on "rinari")
+(depends-on "rvm")
