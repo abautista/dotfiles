@@ -45,6 +45,16 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "M-o") 'other-window)
 
+;; org mode
+(add-hook 'text-mode-hook
+	  '(lambda ()
+	     (set-fill-column 80)
+	     (turn-on-auto-fill)))
+
+(global-set-key (kbd "C-c o") (lambda ()
+				(interactive)
+				(find-file "~/notes/organizer.org")))
+
 ;; ruby
 (global-rinari-mode)
 
@@ -78,4 +88,3 @@
 	  (function (lambda ()
 		      (setq web-mode-markup-indent-offset 2)
 		      (setq web-mode-css-indent-offset 2))))
-(put 'dired-find-alternate-file 'disabled nil)
