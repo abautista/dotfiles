@@ -1,51 +1,36 @@
-;; cask
-(require 'cask "~/.cask/cask.el")
-(cask-initialize)
+;;; init.el --- emacs init file.
 
-;; clean the interface
-(load-theme 'tango-dark)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
+;;; Commentary:
+
+;; This is my emacs configuration.
+
+;;; Code:
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("melpa" . "http://melpa.org/packages/")
+                         ("org" . "http://orgmode.org/elpa/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")))
+
+;; initialize the packages and create the packages list if not exists
+(package-initialize)
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
 
 ;; disable auto-save and auto-backup
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 (setq scroll-conservatively most-positive-fixnum)
 
-;; autocomplete
-(ac-config-default)
+;; clean the interface
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(load-theme 'tango-dark)
 
-;; snippets
-(setq yas-snippet-dirs
-      '("~/.emacs.d/snippets"))
-(yas-global-mode)
+;; disable auto-save and auto-backup
+(setq auto-save-default nil)
+(setq make-backup-files nil)
 
-(defun create-snippet (filename)
-  (interactive "s")
-  (let ((mode (symbol-name major-mode)))
-    (find-file (format "~/.emacs.d/snippets/%s/%s" mode filename))
-    (snippet-mode)))
-
-(global-set-key (kbd "M-'") 'create-snippet)
-
-;; projectile
-(projectile-global-mode)
-(setq projectile-completion-system 'helm)
-(helm-projectile-on)
-
-;; enable fuzzy matching
-(setq helm-semantic-fuzzy-match t)
-(setq helm-imenu-fuzzy-match t)
-
-;; keybindings
-(global-set-key (kbd "C-o") 'er/expand-region)
-(global-set-key (kbd "C-p") 'helm-projectile)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x b") 'helm-mini)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "M-o") 'other-window)
-
-;; org mode
+;; org-mode
 (add-hook 'text-mode-hook
 	  '(lambda ()
 	     (set-fill-column 80)
@@ -55,36 +40,11 @@
 				(interactive)
 				(find-file "~/notes/organizer.org")))
 
-;; ruby
-(global-rinari-mode)
+(setq org-default-notes-file "~/notes/organizer.org")
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "M-o") 'other-window)
 
-;; python
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
-(setq jedi:environment-root "default3")
-(setq jedi:environment-virtualenv (list "virtualenv" "-p" "/usr/local/bin/python3"))
+;; packages-configuration
+(load "~/.emacs.d/packages-configuration.el")
 
-;; css
-(add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
-(add-hook 'css-mode-hook
-	  (function (lambda ()
-		      (setq css-indent-offset 2))))
-
-;; web
-(add-hook 'sgml-mode-hook 'emmet-mode)
-(add-hook 'web-mode-hook 'emmet-mode)
-(setq web-mode-enable-current-column-highlight t)
-(setq web-mode-enable-auto-pairing t)
-
-(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-
-(add-hook 'web-mode-hook
-	  (function (lambda ()
-		      (setq web-mode-markup-indent-offset 2)
-		      (setq web-mode-css-indent-offset 2))))
+;;; init.el ends here
