@@ -2,7 +2,7 @@
 
 DOTFILESDIR="$(pwd -P)"
 
-for DOTFILE in {gemrc,emacs.d,aliases,tmux.conf,exports,path,zshrc,vim,vimrc,gitconfig,gitignore_global}; do
+for DOTFILE in {gemrc,emacs.d,aliases,tmux.conf,exports,path,zshrc,vim,vimrc,gitconfig,gitignore_global,bash_profile,bashrc}; do
     HOMEFILE="$HOME/.$DOTFILE"
     DIRFILE="$DOTFILESDIR/$DOTFILE"
     

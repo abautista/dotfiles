@@ -1,15 +1,14 @@
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Recursively delete `.DS_Store` files
+# recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
+# setup a local http server
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
-# Hide/show all desktop icons (useful when presenting)
+
+# hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
+# tmux aliases
 alias tmns='tmux new -s'
 alias tmls='tmux list-session'
 alias tmas='tmux attach -t'

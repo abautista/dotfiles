@@ -3,7 +3,8 @@
 	email = alberto.bautista@me.com
 
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/abautista/.gitignore_global
+
 [alias]
   l = log --oneline --abbrev-commit --abbrev=4 -25
   s = status -s
@@ -12,3 +13,12 @@
 # http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
 [url "git@github.com:abautista/"]
 	insteadOf = "git://github.com/abautista/"
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
