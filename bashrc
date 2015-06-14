@@ -4,11 +4,10 @@
 PATH=/usr/local/bin:/usr/local/share/npm/bin:$HOME/bin:$PATH
 
 # alias definitions
-if [ -f ~/.aliases ]; then
-   . ~/.aliases
+if [ -r ~/.aliases ]; then
+  source ~/.aliases
 fi
 
-# virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh
-
-
+# pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

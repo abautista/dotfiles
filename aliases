@@ -13,3 +13,6 @@ alias tmns='tmux new -s'
 alias tmls='tmux list-session'
 alias tmas='tmux attach -t'
 alias tmks='tmux kill-session -t'
+
+# emacs gui
+alias emacs='open -a /Applications/Emacs.app'
