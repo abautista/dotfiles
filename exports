@@ -1,3 +1,0 @@
-export WORKON_HOME="~/Envs"
-export LC_ALL=en.UTF-8
-export LANG=en_US.UTF-8
