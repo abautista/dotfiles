@@ -1,2 +1,0 @@
-PATH=/usr/local/bin:/usr/local/share/npm/bin:$HOME/bin:$HOME/.cask/bin:$PATH
-export PATH
