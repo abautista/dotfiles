@@ -8,11 +8,21 @@ alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
+# I am lazy
+alias c=clear
+
 # tmux aliases
 alias tmns='tmux new -s'
 alias tmls='tmux list-session'
 alias tmas='tmux attach -t'
 alias tmks='tmux kill-session -t'
 
-# emacs gui
-alias emacs='open -a /Applications/Emacs.app'
+# emacs configurations
+alias sem='switch_emacs.sh spacemacs; export EMACS_CONFIGURATION="spacemacs"; open -a /Applications/Emacs.app'
+alias em='switch_emacs.sh abautista; export EMACS_CONFIGURATION="abautista"; open -a /Applications/Emacs.app'
+
+# folders
+alias fcp='cd ~/Documents/code_projects; ls -l'
+alias fcc='cd ~/Documents/code_courses; ls -l'
+alias fcb='cd ~/Documents/code_books'
+alias ftmp='cd ~/Documents/tmp; ls -l'
