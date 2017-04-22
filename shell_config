@@ -1,0 +1,23 @@
+# path
+export PATH=~/anaconda_py2/bin:~/.bin:/usr/local/bin:$PATH
+
+# Aliases
+if [ -r ~/.aliases ]; then
+  source ~/.aliases
+fi
+
+# Check which emacs configuration I am using
+if [ $(readlink $HOME/.emacs.d) == "$HOME/.emacs.d.spacemacs" ]; then
+  export EMACS_CONFIGURATION="spacemacs"
+fi
+
+if [ $(readlink $HOME/.emacs.d) == "$HOME/.emacs.d.abautista" ]; then
+  export EMACS_CONFIGURATION="abautista"
+fi
+
+# virtualenvs python
+export VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python3'
+export WORKON_HOME=~/.virtualenvs
+
+# virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh

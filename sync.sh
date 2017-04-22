@@ -2,11 +2,11 @@
 
 DOTFILESDIR="$(pwd -P)"
 
-for DOTFILE in {gemrc,emacs.d,aliases,tmux.conf,exports,path,zshrc,vim,vimrc,gitconfig,gitignore_global,bash_profile,bashrc}; do
+for DOTFILE in {shell_config,bashrc,bash_profile,zshrc,aliases,gitconfig,gitignore_global,vim,vimrc,emacs.d.abautista,tmux.conf,bin}; do
     HOMEFILE="$HOME/.$DOTFILE"
     DIRFILE="$DOTFILESDIR/$DOTFILE"
-    
-    if [ -L $HOMEFILE ] && ! [ -d $DOTFILE ] 
+
+    if [ -L $HOMEFILE ] && ! [ -d $DOTFILE ]
     then
 	    ln -sfv "$DIRFILE" "$HOMEFILE"
     else

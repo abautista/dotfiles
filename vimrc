@@ -3,7 +3,7 @@ set nocompatible
 set backspace=2
 set encoding=utf-8
 " }}}
-" UI options {{{ 
+" UI options {{{
 set colorcolumn=80                               " show vertical ruler
 set number                                       " show line numbers
 set cursorline                                   " highlight current line
@@ -13,10 +13,9 @@ set guifont=Monaco:h12                           " font macvim
 set guioptions-=L                                " hide left hand scrollbar
 set guioptions-=r                                " hide right hand scrollbar
 syntax on                                        " turn on syntax coloring
-colorscheme mustang                              " colorscheme
 highlight ColorColumn ctermbg=235  guibg=#111111 " color of vertical ruler
 " }}}
-" Spaces & Tabs {{{ 
+" Spaces & Tabs {{{
 set tabstop=2     " 2 space tab
 set softtabstop=2 " 2 space tab
 set expandtab     " use spaces for tabs
@@ -41,13 +40,9 @@ Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdtree'
 Plugin 'SirVer/ultisnips'
 Plugin 'kien/ctrlp.vim'
-Plugin 'tomasr/molokai'
 Plugin 'godlygeek/tabular'
-Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
-Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
 filetype off
@@ -64,6 +59,7 @@ let mapleader = ","
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
 nnoremap <leader>v :tabedit $MYVIMRC<CR>
 nnoremap <leader>t <C-w>v<C-w>l
 nnoremap <Space> za
@@ -71,10 +67,11 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <C-n> :NERDTreeToggle<CR> 
+nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <Leader>. :exe "vertical resize +5"<CR>
 nnoremap <Leader>- :exe "vertical resize -5"<CR>
+
+autocmd FileType python setlocal completeopt-=preview
 " }}}
 
-"let g:clang_user_options='|| exit 0'
 " vim:foldmethod=marker:foldlevel=0

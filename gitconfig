@@ -1,9 +1,11 @@
 [user]
 	name = Alberto Bautista
 	email = alberto.bautista@me.com
+	username = abautista
 
 [core]
 	excludesfile = /Users/abautista/.gitignore_global
+	editor = vim
 
 [alias]
   l = log --oneline --abbrev-commit --abbrev=4 -25

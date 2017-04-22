@@ -15,6 +15,13 @@ case $1 in
             emacs_path=~/.emacs.d.abautista
         fi;;
 
+    "clojurebook")
+        if [ "$EMACS_CONFIGURATION" == "clojurebook" ]; then
+          exit 1
+        else
+          emacs_path=~/.emacs.d.clojurebook
+        fi;;
+
     *)
         echo "Shut the fuck off"
         exit 1;;
