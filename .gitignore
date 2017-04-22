@@ -3,10 +3,14 @@
 vim/bundle
 .DS_Store
 
-emacs.d/.cask
-emacs.d/elpa
-emacs.d/bookmarks
-emacs.d/projectile-bookmarks.eld
-emacs.d/ac-comphist.dat
-emacs.d/auto-save-list
-emacs.d/.python-environments
+emacs.d.abautista/.cask
+emacs.d.abautista/elpa
+emacs.d.abautista/bookmarks
+emacs.d.abautista/projectile-bookmarks.eld
+emacs.d.abautista/ac-comphist.dat
+emacs.d.abautista/auto-save-list
+emacs.d.abautista/.python-environments
+emacs.d.abautista/recentf
+emacs.d.abautista/projectile.cache
+emacs.d.abautista/ido.last
+
