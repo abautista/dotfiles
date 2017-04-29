@@ -7,17 +7,19 @@ if [ -r ~/.aliases ]; then
 fi
 
 # Check which emacs configuration I am using
-if [ $(readlink $HOME/.emacs.d) == "$HOME/.emacs.d.spacemacs" ]; then
+if [[ $(readlink $HOME/.emacs.d) == "$HOME/.emacs.d.spacemacs" ]]; then
   export EMACS_CONFIGURATION="spacemacs"
 fi
 
-if [ $(readlink $HOME/.emacs.d) == "$HOME/.emacs.d.abautista" ]; then
+if [[ $(readlink $HOME/.emacs.d) == "$HOME/.emacs.d.abautista" ]]; then
   export EMACS_CONFIGURATION="abautista"
 fi
 
 # virtualenvs python
-export VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python3'
-export WORKON_HOME=~/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
+export VIRTUALENVWRAPPER_VIRTUALENV="/usr/local/bin/virtualenv"
+export WORKON_HOME="~/.virtualenvs"
 
 # virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
+
