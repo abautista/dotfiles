@@ -45,18 +45,24 @@
   ("C-x C-f" . helm-find-files)
   ("M-x" . helm-M-x)
   ("M-y" . helm-show-kill-ring)
-)
+  )
+
+;; markdown mode
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
 
 ;; mode for quickly browsing and editing plain notes
 (use-package deft
   :ensure t
   :bind ("C-x C-g" . deft)
   :config
-  (setq deft-default-extension "org"))
-
-;; color-theme
-(use-package atom-one-dark-theme
-  :ensure t)
+  (setq deft-use-filter-string-for-filename t)
+  (setq deft-default-extension "md"))
 
 ;; Add a directory to our load path, so when you `load` things below,
 ;; emacs knows where to look for the corresponding file.
