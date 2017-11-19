@@ -11,3 +11,5 @@ fi
 if [[ $(readlink $HOME/.emacs.d) == "$HOME/.emacs.d.abautista" ]]; then
   export EMACS_CONFIGURATION="abautista"
 fi
+
+export PATH="$(pwd -P)/.bin:$PATH"

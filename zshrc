@@ -1,5 +1,5 @@
 # common configuration
-source ~/.common_shell_config
+source ~/.common_shell_config.sh
   
 # configuration oh-my-zsh.
 ZSH=$HOME/.oh-my-zsh
