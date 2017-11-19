@@ -1,12 +1,5 @@
-# recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-
 # setup a local http server
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
-
-# hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 # I am lazy
 alias c=clear

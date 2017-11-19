@@ -1,6 +1,3 @@
-# path
-export PATH=~/anaconda_py2/bin:~/.bin:/usr/local/bin:$PATH
-
 # Aliases
 if [ -r ~/.aliases ]; then
   source ~/.aliases
@@ -14,12 +11,3 @@ fi
 if [[ $(readlink $HOME/.emacs.d) == "$HOME/.emacs.d.abautista" ]]; then
   export EMACS_CONFIGURATION="abautista"
 fi
-
-# virtualenvs python
-export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
-export VIRTUALENVWRAPPER_VIRTUALENV="/usr/local/bin/virtualenv"
-export WORKON_HOME="~/.virtualenvs"
-
-# virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh
-
