@@ -3,6 +3,7 @@ alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
 
 # I am lazy
 alias c=clear
+alias cutcpp='cookiecutter gh:abautista/cookiecutter-cpp'
 
 # tmux aliases
 alias tmns='tmux new -s'
