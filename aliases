@@ -1,9 +1,15 @@
 # setup a local http server
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
 
-# I am lazy
+# Utils
 alias c=clear
 alias cutcpp='cookiecutter gh:abautista/cookiecutter-cpp'
+alias n='terminal_velocity -e mdless -x md $(pwd)/Dropbox/Notes'
+alias ne='terminal_velocity -x md $(pwd)/Dropbox/Notes'
+
+# Docker
+alias dps='docker ps -a'
+alias dco='docker-compose'
 
 # tmux aliases
 alias tmns='tmux new -s'
@@ -12,7 +18,7 @@ alias tmas='tmux attach -t'
 alias tmks='tmux kill-session -t'
 
 # emacs configurations
-alias sem='switch_emacs.sh spacemacs; export EMACS_CONFIGURATION="spacemacs"; open -a /Applications/Emacs.app'
-alias em='switch_emacs.sh abautista; export EMACS_CONFIGURATION="abautista"; open -a /Applications/Emacs.app'
-alias cem='switch_emacs.sh clojurebook; export EMACS_CONFIGURATION="clojurebook"; open -a /Applications/Emacs.app'
+alias sem='switch_emacs.sh spacemacs; export EMACS_CONFIGURATION="spacemacs"'
+alias em='switch_emacs.sh abautista; export EMACS_CONFIGURATION="abautista"'
+alias cem='switch_emacs.sh clojurebook; export EMACS_CONFIGURATION="clojurebook"'
 
