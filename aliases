@@ -4,8 +4,8 @@ alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
 # Utils
 alias c=clear
 alias cutcpp='cookiecutter gh:abautista/cookiecutter-cpp'
-alias n='terminal_velocity -e mdless -x md $(pwd)/Dropbox/Notes'
-alias ne='terminal_velocity -x md $(pwd)/Dropbox/Notes'
+alias n='terminal_velocity -e mdless -x md $(pwd)/Dropbox/tldr'
+alias ne='terminal_velocity -e nvim -x md $(pwd)/Dropbox/tldr'
 
 # Docker
 alias dps='docker ps -a'
