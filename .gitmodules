@@ -1,0 +1,6 @@
+[submodule "nvim/.config/nvim/pack/minpac/opt/minpac"]
+	path = nvim/.config/nvim/pack/minpac/opt/minpac
+	url = https://github.com/k-takata/minpac.git
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = git://github.com/robbyrussell/oh-my-zsh.git

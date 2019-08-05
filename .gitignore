@@ -1,8 +1,8 @@
 *.swp
 .netrwhist
 vim/bundle
+nvim/.config/nvim/pack/minpac/start
 .DS_Store
-
 emacs.d.abautista/.cask
 emacs.d.abautista/elpa
 emacs.d.abautista/bookmarks

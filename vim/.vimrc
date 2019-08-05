@@ -9,7 +9,6 @@ set number                                       " show line numbers
 set cursorline                                   " highlight current line
 set visualbell                                   " no bell please
 set laststatus=2                                 " always show line status
-set guifont=Monaco:h12                           " font macvim
 set guioptions-=L                                " hide left hand scrollbar
 set guioptions-=r                                " hide right hand scrollbar
 syntax on                                        " turn on syntax coloring
